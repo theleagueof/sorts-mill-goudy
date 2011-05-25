@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="figuredash.uppercase" format="1">
+  <advance width="508"/>
+  <outline>
+    <contour>
+      <point x="0" y="308"/>
+      <point x="0" y="307"/>
+      <point x="38" y="307" type="curve" smooth="yes"/>
+      <point x="486" y="307" type="line" smooth="yes"/>
+      <point x="499" y="307"/>
+      <point x="508" y="317"/>
+      <point x="508" y="330" type="curve" smooth="yes"/>
+      <point x="508" y="358"/>
+      <point x="501" y="360"/>
+      <point x="486" y="360" type="curve" smooth="yes"/>
+      <point x="34" y="360" type="line" smooth="yes"/>
+      <point x="10" y="360"/>
+      <point x="0" y="358"/>
+      <point x="0" y="336" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>
