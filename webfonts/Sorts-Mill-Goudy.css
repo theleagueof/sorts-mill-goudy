@@ -1,0 +1,27 @@
+/*
+  'Sorts Mill Goudy'
+  https://www.theleagueofmoveabletype.com/sorts-mill-goudy
+
+  Copyright (c) 2009, Barry Schwartz <site-chieftain@crudfactory.com>,
+  with Reserved Font Name OFL "Sorts Mill Goudy".
+
+  This Font Software is licensed under the SIL Open Font License, Version 1.1.
+  http://scripts.sil.org/OFL
+*/
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  font-style: normal; /* Roman (Regular) */
+  src: url('Sorts-Mill-Goudy-webfont.eot?#iefix') format('embedded-opentype'),
+       url('Sorts-Mill-Goudy-webfont.woff') format('woff'),
+       url('Sorts-Mill-Goudy-webfont.ttf')  format('truetype'),
+       url('Sorts-Mill-Goudy-webfont.svg#webfontuJixCSe1') format('svg');
+}
+
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  font-style: italic;
+  src: url('Sorts-Mill-Goudy-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('Sorts-Mill-Goudy-Italic-webfont.woff') format('woff'),
+       url('Sorts-Mill-Goudy-Italic-webfont.ttf')  format('truetype'),
+       url('Sorts-Mill-Goudy-Italic-webfont.svg#webfonto679uXZB') format('svg');
+}
