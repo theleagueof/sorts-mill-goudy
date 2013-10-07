@@ -11,6 +11,7 @@
 @font-face {
   font-family: 'Sorts Mill Goudy';
   font-style: normal; /* Roman (Regular) */
+  src: url('Sorts-Mill-Goudy-webfont.eot'),
   src: url('Sorts-Mill-Goudy-webfont.eot?#iefix') format('embedded-opentype'),
        url('Sorts-Mill-Goudy-webfont.woff') format('woff'),
        url('Sorts-Mill-Goudy-webfont.ttf')  format('truetype'),
@@ -20,6 +21,7 @@
 @font-face {
   font-family: 'Sorts Mill Goudy';
   font-style: italic;
+  src: url('Sorts-Mill-Goudy-Italic-webfont.eot'),
   src: url('Sorts-Mill-Goudy-Italic-webfont.eot?#iefix') format('embedded-opentype'),
        url('Sorts-Mill-Goudy-Italic-webfont.woff') format('woff'),
        url('Sorts-Mill-Goudy-Italic-webfont.ttf')  format('truetype'),
