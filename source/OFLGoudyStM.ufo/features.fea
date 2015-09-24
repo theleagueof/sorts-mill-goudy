@@ -1,0 +1,105 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem latn AZE;
+languagesystem latn CRT;
+languagesystem latn TRK;
+
+#feature aalt {
+#  XX
+#} aalt;
+
+#feature aalt {
+#  XX
+#} aalt;
+
+lookup locl.TRK {
+  sub i by i.TRK;
+} locl.TRK;
+
+feature locl {
+  script latn;
+  language AZE exclude_dflt;
+  lookup locl.TRK;
+  language CRT exclude_dflt;
+  lookup locl.TRK;
+  language TRK exclude_dflt;
+  lookup locl.TRK;
+} locl;
+
+@set1 = [zero one two three four five six seven eight nine comma period];
+@set1.numer = [zero.lining.numer one.lining.numer two.lining.numer three.lining.numer four.lining.numer five.lining.numer six.lining.numer seven.lining.numer eight.lining.numer nine.lining.numer comma.numer period.numer];
+@set1.denom = [zero.lining.denom one.lining.denom two.lining.denom three.lining.denom four.lining.denom five.lining.denom six.lining.denom seven.lining.denom eight.lining.denom nine.lining.denom comma.denom period.denom];
+@set1.sup = [zero.lining.sup one.lining.sup two.lining.sup three.lining.sup four.lining.sup five.lining.sup six.lining.sup seven.lining.sup eight.lining.sup nine.lining.sup comma.sup period.sup];
+@set1.sub = [zero.lining.sub one.lining.sub two.lining.sub three.lining.sub four.lining.sub five.lining.sub six.lining.sub seven.lining.sub eight.lining.sub nine.lining.sub comma.sub period.sub];
+
+lookup numer {
+  sub slash by fraction;
+  sub @set1 by @set1.numer;
+} numer;
+
+feature numr {
+  lookup numer;
+} numr;
+
+feature dnom {
+  sub @set1 by @set1.denom;
+} dnom;
+
+feature frac {
+  lookup numer;
+  sub [fraction @set1.denom] @set1.numer' by @set1.denom;
+} frac;
+
+feature sups {
+  sub [@set1 dollar bracketleft bracketright parenleft parenright] by [@set1.sup dollar.lining.sup bracketleft.sup bracketright.sup parenleft.sup parenright.sup];
+} sups;
+
+feature subs {
+  sub [@set1 dollar bracketleft bracketright parenleft parenright] by [@set1.sub dollar.lining.sub bracketleft.sub bracketright.sub parenleft.sub parenright.sub];
+} subs;
+
+lookup lining {
+  sub [zero one two three four five six seven eight nine dollar] by [zero.lining one.lining two.lining three.lining four.lining five.lining six.lining seven.lining eight.lining nine.lining dollar.lining];
+} lining;
+
+feature lnum {
+  lookup lining;
+} lnum;
+
+feature smcp {
+  sub [a-z aacute abreve acircumflex adieresis ae agrave amacron ampersand aogonek aring atilde cacute ccaron ccedilla ccircumflex cdotaccent dcaron dcroat eacute ebreve ecaron ecircumflex edieresis edotaccent egrave emacron eogonek eth gbreve gcircumflex gcommaaccent gdotaccent hbar hcircumflex iacute ibreve icircumflex idieresis igrave imacron iogonek itilde i.TRK jcircumflex kcommaaccent lacute lcaron lcommaaccent ldot lslash nacute ncaron ncommaaccent ntilde oacute obreve ocircumflex odieresis oe ograve ohungarumlaut omacron oslash otilde periodcentered racute rcaron rcommaaccent sacute scaron scedilla scircumflex scommaaccent tbar tcaron tcedilla tcommaaccent thorn uacute ubreve ucircumflex udieresis ugrave uhungarumlaut umacron uogonek uring utilde wcircumflex yacute ycircumflex ydieresis zacute zcaron zdotaccent] by [a.sc-z.sc aacute.sc abreve.sc acircumflex.sc adieresis.sc ae.sc agrave.sc amacron.sc ampersand.sc aogonek.sc aring.sc atilde.sc cacute.sc ccaron.sc ccedilla.sc ccircumflex.sc cdotaccent.sc dcaron.sc dcroat.sc eacute.sc ebreve.sc ecaron.sc ecircumflex.sc edieresis.sc edotaccent.sc egrave.sc emacron.sc eogonek.sc eth.sc gbreve.sc gcircumflex.sc gcommaaccent.sc gdotaccent.sc hbar.sc hcircumflex.sc iacute.sc ibreve.sc icircumflex.sc idieresis.sc igrave.sc imacron.sc iogonek.sc itilde.sc i.TRK.sc jcircumflex.sc kcommaaccent.sc lacute.sc lcaron.sc lcommaaccent.sc ldot.sc lslash.sc nacute.sc ncaron.sc ncommaaccent.sc ntilde.sc oacute.sc obreve.sc ocircumflex.sc odieresis.sc oe.sc ograve.sc ohungarumlaut.sc omacron.sc oslash.sc otilde.sc periodcentered.sc racute.sc rcaron.sc rcommaaccent.sc sacute.sc scaron.sc scedilla.sc scircumflex.sc scommaaccent.sc tbar.sc tcaron.sc tcedilla.sc tcommaaccent.sc thorn.sc uacute.sc ubreve.sc ucircumflex.sc udieresis.sc ugrave.sc uhungarumlaut.sc umacron.sc uogonek.sc uring.sc utilde.sc wcircumflex.sc yacute.sc ycircumflex.sc ydieresis.sc zacute.sc zcaron.sc zdotaccent.sc];
+} smcp;
+
+feature c2sc {
+  sub [A-Z Aacute Abreve Acircumflex Adieresis AE Agrave Amacron Aogonek Aring Atilde Cacute Ccaron Ccedilla Ccircumflex Cdotaccent Dcaron Dcroat Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Egrave Emacron Eogonek Eth Gbreve Gcircumflex Gcommaaccent Gdotaccent Hbar Hcircumflex Iacute Ibreve Icircumflex Idieresis Igrave Imacron Iogonek Itilde Jcircumflex Kcommaaccent Lacute Lcaron Lcommaaccent Ldot Lslash Nacute Ncaron Ncommaaccent Ntilde Oacute Obreve Ocircumflex Odieresis OE Ograve Ohungarumlaut Omacron Oslash Otilde Racute Rcaron Rcommaaccent Sacute Scaron Scedilla Scircumflex Scommaaccent Tbar Tcaron Tcedilla Tcommaaccent Thorn Uacute Ubreve Ucircumflex Udieresis Ugrave Uhungarumlaut Umacron Uogonek Uring Utilde Wcircumflex Yacute Ycircumflex Ydieresis Zacute Zcaron Zdotaccent] by [a.sc-z.sc aacute.sc abreve.sc acircumflex.sc adieresis.sc ae.sc agrave.sc amacron.sc aogonek.sc aring.sc atilde.sc cacute.sc ccaron.sc ccedilla.sc ccircumflex.sc cdotaccent.sc dcaron.sc dcroat.sc eacute.sc ebreve.sc ecaron.sc ecircumflex.sc edieresis.sc edotaccent.sc egrave.sc emacron.sc eogonek.sc eth.sc gbreve.sc gcircumflex.sc gcommaaccent.sc gdotaccent.sc hbar.sc hcircumflex.sc iacute.sc ibreve.sc icircumflex.sc idieresis.sc igrave.sc imacron.sc iogonek.sc itilde.sc jcircumflex.sc kcommaaccent.sc lacute.sc lcaron.sc lcommaaccent.sc ldot.sc lslash.sc nacute.sc ncaron.sc ncommaaccent.sc ntilde.sc oacute.sc obreve.sc ocircumflex.sc odieresis.sc oe.sc ograve.sc ohungarumlaut.sc omacron.sc oslash.sc otilde.sc racute.sc rcaron.sc rcommaaccent.sc sacute.sc scaron.sc scedilla.sc scircumflex.sc scommaaccent.sc tbar.sc tcaron.sc tcedilla.sc tcommaaccent.sc thorn.sc uacute.sc ubreve.sc ucircumflex.sc udieresis.sc ugrave.sc uhungarumlaut.sc umacron.sc uogonek.sc uring.sc utilde.sc wcircumflex.sc yacute.sc ycircumflex.sc ydieresis.sc zacute.sc zcaron.sc zdotaccent.sc];
+} c2sc;
+
+feature hist {
+  sub s by longs;
+} hist;
+
+feature case {
+  lookup lining;
+  sub [afii00208 braceleft braceright bracketleft bracketright emdash endash figuredash guillemotleft guillemotright guilsinglleft guilsinglright hyphen parenleft parenright uni2010 uni2011] by [afii00208.uppercase braceleft.uppercase braceright.uppercase bracketleft.uppercase bracketright.uppercase emdash.uppercase endash.uppercase figuredash.uppercase guillemotleft.uppercase guillemotright.uppercase guilsinglleft.uppercase guilsinglright.uppercase hyphen.uppercase parenleft.uppercase parenright.uppercase uni2010.uppercase uni2011.uppercase];
+  #sub uni00AD by uni00AD.uppercase;
+} case;
+
+feature liga {
+  sub f f b by f_f_b;
+  sub f f h by f_f_h;
+  sub f f i by f_f_i;
+  sub f f j by f_f_j;
+  sub f f k by f_f_k;
+  sub f f l by f_f_l;
+  sub f b by f_b;
+  sub f f by f_f;
+  sub f h by f_h;
+  sub f i by f_i;
+  sub f j by f_j;
+  sub f k by f_k;
+  sub f l by f_l;
+} liga;
+
+feature dlig {
+  sub c t by c_t;
+} dlig;
